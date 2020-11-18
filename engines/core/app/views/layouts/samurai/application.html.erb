@@ -7,8 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -17,6 +15,9 @@
     </div>
   </nav>
   <div class='container' role='main'>
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key.to_sym) %>"><%= value %></div>
+    <% end %>
     <div class='jumbotron'>
       <%= yield %>
     </div>
