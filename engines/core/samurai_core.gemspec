@@ -32,6 +32,8 @@ Gem::Specification.new do |spec|
 
   # Authenticate user
   spec.add_dependency 'devise'
+  # Authorization
+  spec.add_dependency 'cancan'
 
   spec.add_development_dependency "sqlite3"
 end
