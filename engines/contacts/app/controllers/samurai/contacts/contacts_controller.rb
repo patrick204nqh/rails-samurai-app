@@ -6,7 +6,7 @@ module Samurai::Contacts
 
     # GET /contacts
     def index
-      @contacts = Contact.all
+      @contacts = current_user.contacts
     end
 
     # GET /contacts/1
