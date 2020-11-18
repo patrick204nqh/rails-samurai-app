@@ -30,5 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'bootstrap-sass'
   spec.add_dependency 'autoprefixer-rails'
 
+  # Authenticate user
+  spec.add_dependency 'devise'
+
   spec.add_development_dependency "sqlite3"
 end
