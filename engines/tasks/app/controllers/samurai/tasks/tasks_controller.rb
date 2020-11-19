@@ -25,7 +25,6 @@ module Samurai::Tasks
     # POST /tasks
     def create
       @task = Task.new(task_params)
-
       if @task.save
         redirect_to [samurai, @task], notice: 'Task was successfully created.'
       else

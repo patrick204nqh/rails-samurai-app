@@ -1,4 +1,4 @@
-require_dependency "samurai/contacts/application_controller"
+# require_dependency "samurai/contacts/application_controller"
 
 module Samurai::Contacts
   class ContactsController < ApplicationController
@@ -53,6 +53,8 @@ module Samurai::Contacts
       # Use callbacks to share common setup or constraints between actions.
       def set_contact
         @contact = Contact.find(params[:id])
+        logger.info "[[[[[[[[[[[[[[[[[[[[[["
+        logger.info "#{@contact}"
       end
 
       # Only allow a trusted parameter "white list" through.
