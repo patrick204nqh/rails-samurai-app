@@ -1,5 +1,12 @@
-<h1>New Task</h1>
+<h2>New Task</h2>
+<hr>
 
-<%= render 'form', task: @task %>
-
-<%= link_to 'Back', tasks_path %>
+<%= form_for([samurai, @task]) do |f| %>
+  <%= render 'form', f: f %>
+  <div class="form-group">
+    <div>
+      <%= f.submit "Create Task", class: "btn btn-primary" %>
+      <%= link_to 'Back', samurai.tasks_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
